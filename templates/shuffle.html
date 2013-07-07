@@ -369,7 +369,7 @@ $('#shuffle a').click(function(){
                       $("#background").fadeOut("slow");
                       $("#large").fadeOut("slow");
                   }
-                  if(e.keyCode==32){
+                  if(e.which==32){
                     var $oldItems = $('.card');
                     course_list = shuffle(course_list);
                     var stop = (counter+13)
