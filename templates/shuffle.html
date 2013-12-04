@@ -8,13 +8,14 @@
   <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="../../../../static/isotope2.js"></script>
    <script src="../../../../static/getClasses.js"></script>
-  <script src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
+  <script src="http://fgnass.github.io/spin.js/dist/spin.js"></script>
 </head>
 <body>
+  <div id ="spinner"></div>
   <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
-<div>
+<div id ="header">
   <script type=text/javascript>
   
 </script>
@@ -55,7 +56,7 @@
     {% endfor %}
   </div>
   </div>
-
+  
   <!-- <div id="explode">Explode</div> -->
   
 <!-- 
@@ -87,7 +88,25 @@
   <div id="background"></div>
   
     <script>  
-
+    var opts = {
+      lines: 13, // The number of lines to draw
+      length: 7, // The length of each line
+      width: 4, // The line thickness
+      radius: 10, // The radius of the inner circle
+      corners: 1, // Corner roundness (0..1)
+      rotate: 0, // The rotation offset
+      color: '#fff', // #rgb or #rrggbb
+      speed: 1, // Rounds per second
+      trail: 60, // Afterglow percentage
+      shadow: true, // Whether to render a shadow
+      hwaccel: false, // Whether to use hardware acceleration
+      className: 'spinner', // The CSS class to assign to the spinner
+      zIndex: 2e9, // The z-index (defaults to 2000000000)
+      top: 'auto', // Top position relative to parent in px
+      left: 'auto' // Left position relative to parent in px
+    };
+    var target = document.getElementById('spinner');
+    var spinner = new Spinner(opts);
 //     var size = {{size}};
 //     var counter = 0;
 //     var course_list = new Array;
@@ -597,11 +616,10 @@
 
 
                     
-                    $("#loading").show();
-                   
+                    spinner.spin(target);
                     $.getJSON($SCRIPT_ROOT + '/_add_numbers',function(data) {
                       
-                       $("#loading").hide();
+                       spinner.stop();
                       for (i=0; i < data["res"].length; i++) {
                         // $(".deck").append("<div class='card' id='box" + i%3 + "'>
                         //   <div><h1 class='classTitle'>" + data["res"][i][name] + "</h1></div></div>");
