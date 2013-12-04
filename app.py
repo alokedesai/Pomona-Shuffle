@@ -1,17 +1,17 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify, Response
 import random
 import pymongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-
+from bson import BSON
+from bson import json_util
+import json
 
 app = Flask(__name__)
 app.jinja_env.add_extension('jinja2.ext.do')
 app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 
-# client = pymongo.MongoClient('mongodb://alokedesai:domino@ds029638.mongolab.com:29638/api')
-# db = client['api']
-# db.authenticate('alokedesai', 'domino')
+
 
 connection = MongoClient("ds029638.mongolab.com", 29638) 
 db = connection["api"]
@@ -68,7 +68,34 @@ def all(major,lownum,highnum,school):
 	random.shuffle(course_list)
 
 	return render_template("shuffle.html", course_list = course_list, length =length, size=size)
+@app.route("/getmore")
+def getmore():
+	course_list = db.cols.find()
+	course_list = course_list[:1]
+	random.shuffle(course_list)
+	print (course_list)
+	print dict(course_list)
+	return "x"
+	
 
+@app.route("/test")
+def test():
+	return render_template("text.html")
+#test for learning ajax
+@app.route('/_add_numbers')
+def add_numbers():
+
+    course_list = list(db.cols.find())
+    
+    random.shuffle(course_list)
+    course_list = course_list[:13]
+
+    resp = Response(json.dumps({'res': course_list}, default=json_util.default),
+                mimetype='application/json')
+    return resp
+
+	
+	 
 @app.route('/class/setfavorite/<course_id>', methods=['POST','GET'])
 def setFavorite(course_id):
 	#course = list(client.db.cols.find_one({"_id['ObjectId']": class_id}))
