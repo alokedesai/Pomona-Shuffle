@@ -3,75 +3,87 @@
 <head>
     <title>5c shuffle</title>
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../static/shufflestyles.css" />
-  <link rel="stylesheet" href="http://use.typekit.com/k/rwc5tlm-d.css?3bb2a6e53c9684ffdc9a9bf5125b2a62b886d0e7b5947eb88209fbdfd0fff71d8334cd03d01da9934d03ad3031ad3450137a679bcf7c272c47260463f5493e91626e2cbb6f8c6caf945f4ed2dab24f2daf2bef6e3a41204f52f4972474642f24b2313cdac009df219a9449a3695202cdbd6f3e97c8981c4050d41e98360e12dd271246618144c60dcb95">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='shufflestyles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='component.css') }}">
+    <script type="text/javascript" src="//use.typekit.net/rht7nvt.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="../../../../static/isotope2.js"></script>
-   <script src="../../../../static/getClasses.js"></script>
   <script src="http://fgnass.github.io/spin.js/dist/spin.js"></script>
   <script src=" {{ url_for('static', filename='jquery.lettering-0.6.1.min.js') }}"></script>
+    <script src=" {{ url_for('static', filename='update.js') }}"></script>
 
 </head>
 <body>
-   <div id="fb-root" ></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  
-  <div style="color:#FFFFFF; position: absolute; float:left; vertical-align: right; z-index: 100;" class="fb-like" data-href="http://www.pomonashuffle.com" data-send="true" data-width="450" data-show-faces="true" data-font="arial" ></div>
-
- <div class="whatisthis"><a class="fancybox" style="font-family:Helvetica, Arial; color:#fff;" href='#inline1' title="Hit 'esc' or click close to get started!">WHAT IS THIS?</a></div></div>
-  <div id="welcome">
     <script>
   $(document).ready(function() {
     $("#logo").lettering();
     $("#logo2").lettering();
+    $("#main-logo").lettering();
+
   });
 </script>
-    <div class="container">
-      <div class="fancy-title">
+<div id="fb-root" ></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div style="color:#FFFFFF; position: absolute; float:left; vertical-align: right; z-index: 100;" class="fb-like" data-href="http://www.pomonashuffle.com" data-send="true" data-width="450" data-show-faces="true" data-font="arial" ></div>
+  <div class="container">
+    <div class="row">
+      <span class="col-md-2">
+        
+      </span>
+      <span class="col-md-8">
+        <h1 style="text-align: center; display: none;" onclick="createCards()"id="main-logo">PS</h1>
+      </span>
+      <span class="col-md-2 pull-right">
+        <!-- <div class="whatisthis"><a class="fancybox" style="font-family:Helvetica, Arial; color:#fff;" href='#inline1' title="Hit 'esc' or click close to get started!">WHAT IS THIS?</a></div> -->
 
-        <h1 id="logo">Pomona</h1>
-        <h1 id="logo2"> Shuffle</h1>
-      </div>
-      <h3 style="margin-top: 50px;">Pomona Shuffle helps you find random courses to take.</h3>
-      <button class="btn btn-lg btn-warning">Get Started</button>
+      </span>
+
+
+    </div>
+
+    <div class="row">
+      <span id="col-md-12" style="text-align:center;">
+          <div id="welcome">
+        
+          
+            <div class="fancy-title">
+
+              <h1 id="logo">Pomona</h1>
+              <h1 id="logo2"> Shuffle</h1>
+            </div>
+            <div id="moreInfo" style="margin-top: 20%;" >
+              <a  onclick="createCards()" class="btn btn-2 btn-2a">Get Started</a> 
+            <h2 style="text-align: center;">Pomona Shuffle helps you explore the course catalog. </br> To get started, press the spacebar.</h2>
+             
+            </div>
+            
+         
+
+        </div>
+      </span>
+
     </div>
 
   </div>
+   
+ 
+  
   
   <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
-<div id ="header">
- 
-    <!-- <div id="fb-root" ></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  
-  <div style="color:#FFFFFF; position: absolute; float:left; vertical-align: right; z-index: 100;" class="fb-like" data-href="http://www.pomonashuffle.com" data-send="true" data-width="450" data-show-faces="true" data-font="arial" ></div>
-
- <div class="whatisthis"><a class="fancybox" style="font-family:Helvetica, Arial; color:#fff;" href='#inline1' title="Hit 'esc' or click close to get started!">WHAT IS THIS?</a></div></div> -->
-
-
-   <center><div class ="fade"><img src="/static/logo.png"></div></center>
-    <img id="loading" src="{{ url_for('static', filename='ajax-loader-1.gif') }}" style="display: none;"/>
-
-</div>
 
 
 
-    <div id="container" class="clickable clearfix container">            
+    <div id="container" style="margin-top: 15px" class="clickable clearfix container">            
 <!--   <div class='deck'>
     {% for i in range(0,length) %}
       <div class='card ' id='box{{ i % 3 }}'>
@@ -122,186 +134,44 @@
     var target = document.getElementById('container');
     var spinner = new Spinner(opts);
 
-    function isotope() {
-      var $container = $('#container');
-    
-    
-      // add randomish size classes
-      $container.find('.card').each(function(){
-        var $this = $(this);
-          $this.addClass('width2');
-          $this.addClass('height2');
-          $this.find('h3,p').hide();
-        });
-      $container.isotope({
-      
-      itemSelector : '.card',
-      masonry : {
-        columnWidth : 120
-      },
-      masonryHorizontal : {
-        rowHeight: 120
-      },
-      getSortData : {
-        symbol : function( $elem ) {
-          return $elem.attr('data-symbol');
-        },
-        category : function( $elem ) {
-          return $elem.attr('data-category');
-        },
-        number : function( $elem ) {
-          return parseInt( $elem.find('.cardNumber').text(), 10 );
-        },
-        weight : function( $elem ) {
+    function createCards() {
+       if($('#welcome').is(':visible')){
+                      $('#welcome').hide();
+                      $("#main-logo").fadeIn(1300);
+                    }
 
-          return $elem.css('background');
-        },
-        name : function ( $elem ) {
-          return $elem.find('.classTitle').text();
-        }
-      }
-    });
-    
-      var $optionSets = $('#options .option-set'),
-          $optionLinks = $optionSets.find('a');
+                    $("#container").empty();
+                    $(".card").remove();
+                    $(".large").remove();
+                    $("#container").isotope("destroy");
+                    $("#container").removeClass("isotope");
+                    $("#container").append("<div class='deck'></div>")
 
-      $optionLinks.click(function(){
-        var $this = $(this);
-        // don't proceed if already selected
-        if ( $this.hasClass('selected') ) {
-          return false;
-        }
-        var $optionSet = $this.parents('.option-set');
-        $optionSet.find('.selected').removeClass('selected');
-        $this.addClass('selected');
-  
-        // make option object dynamically, i.e. { filter: '.my-filter-class' }
-        var options = {},
-            key = $optionSet.attr('data-option-key'),
-            value = $this.attr('data-option-value');
-        // parse 'false' as false boolean
-        value = value === 'false' ? false : value;
-        options[ key ] = value;
-        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-          // changes in layout modes need extra logic
-          changeLayoutMode( $this, options )
-        } else {
-          // otherwise, apply new options
-          $container.isotope( options );
-        }
-        
-        return false;
-      });
+                    console.log("inside function");
+                    
+                    spinner.spin(target);
+                    $.getJSON($SCRIPT_ROOT + '/_add_numbers',function(data) {
+                      
+                       spinner.stop();
+                      for (i=0; i < data["res"].length; i++) {
+                       
+                      
+                       $(".deck").append("<div class='card' id='box" + i%3 + "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["name"] +"</h1></div><h3 id='info'>" + data["res"][i]["major"] + data["res"][i]["number"] + "&#151" + data["res"][i]["teacher"] + " " + data["res"][i]["school"] + "</h3><p id='description'>" + data["res"][i]["description"] + "</p></div>");
+                      }
+                      update();
+                      
+                      
+                    });
+                    return false;
+
+                  }
 
 
-    
-      // change layout
-      var isHorizontal = false;
-      function changeLayoutMode( $link, options ) {
-        var wasHorizontal = isHorizontal;
-        isHorizontal = $link.hasClass('horizontal');
 
-        if ( wasHorizontal !== isHorizontal ) {
-          // orientation change
-          // need to do some clean up for transitions and sizes
-          var style = isHorizontal ? 
-            { height: '80%', width: $container.width() } : 
-            { width: 'auto' };
-          // stop any animation on container height / width
-          $container.filter(':animated').stop();
-          // disable transition, apply revised style
-          $container.addClass('no-transition').css( style );
-          setTimeout(function(){
-            $container.removeClass('no-transition').isotope( options );
-          }, 100 )
-        } else {
-          $container.isotope( options );
-        }
-      }
-
-
-    
-      // change size of clicked element
-      
-
-      // toggle variable sizes of all elements
-      $('#toggle-sizes').find('a').click(function(){
-        $container
-          .toggleClass('variable-sizes')
-          .isotope('reLayout');
-        return false;
-      });
-
-
-    
-      $('#insert a').click(function(){
-        var $newEls = $( fakeElement.getGroup() );
-        $container.isotope( 'insert', $newEls );
-
-        return false;
-      });
-
-      $('#append a').click(function(){
-        var $newEls = $( fakeElement.getGroup() );
-        $container.append( $newEls ).isotope( 'appended', $newEls );
-
-        return false;
-      });
-
-
-    var $sortBy = $('#sort-by');
-    $('#shuffle a').click(function(){
-      $container.isotope('shuffle');
-      $sortBy.find('.selected').removeClass('selected');
-      $sortBy.find('[data-option-value="random"]').addClass('selected');
-      return false;
-    });
-
-    $container.delegate( '.card', 'click', function(){
-        var swap = $(this).find('.cardNumber').text();
-        if((swap === '6' && $(this).hasClass('large'))||$('.card').is(':animated')){
-
-        }
-        else{
-        var $oldItem = $container.find('.focus');  
-        $oldItem.find('.cardNumber').text(swap);      
-        $oldItem.toggleClass('focus');
-        $container.find('.large').find('h3,p').hide();
-        $container.find('.large').find('.classTitle').css({'font-size':'1.5em','font-weight':'none'});
-        $container.find('.large').toggleClass('large');
-        var $removable = $(this);
-        $removable.find('.cardNumber').text('6');
-        if(swap>6){
-          $oldItem.hide();
-          var $oldClone = $oldItem.stop().clone();
-          $oldClone.css('display','inline').delay();
-          $container.isotope('remove',$oldItem);
-          $container.isotope('insert',$oldClone);
-        }        
-        $removable.hide();
-        $removable.toggleClass('large');
-        $removable.toggleClass('focus');
-        $removable.find('.classTitle').css({'font-size':'2.5em','font-weight':'bold'});
-        $removable.find('h3,p').show();
-        var $newItem = $removable.clone();
-        $newItem.css('display','inline');
-        $container.isotope('remove',$removable);
-        $container.isotope('insert',$newItem);
-
-        
-        $container.isotope({sortBy: 'number'});
-        
-        $container.isotope('reLayout');
-      }
-      });
-          
-  }
-
-
-     $(isotope());
+     // $(isotope());
 
     $(function(){
-
+        var execute = true
         $('.fancybox').mouseenter(function(){
         $('div a.fancybox').css('color','#CCC');
       });
@@ -324,38 +194,8 @@
                       $("#large").fadeOut("slow");
                   }
                   if(e.which==32){
-                    
-                    //clean up how you're emptying the content
-                    // $(".deck").empty();
-                      if($('#welcome').is(':visible')){
-                      $('#welcome').hide();
-                    } 
-                    $("#container").empty();
-                    $(".card").remove();
-                    $(".large").remove();
-                    $("#container").isotope("destroy");
-                    $("#container").removeClass("isotope");
-                    $("#container").append("<div class='deck'></div>")
-
-
-                    
-                    spinner.spin(target);
-                    $.getJSON($SCRIPT_ROOT + '/_add_numbers',function(data) {
-                      
-                       spinner.stop();
-                      for (i=0; i < data["res"].length; i++) {
-                       
-                      
-                       $(".deck").append("<div class='card' id='box" + i%3 + "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["name"] +"</h1></div><h3 id='info'>" + data["res"][i]["major"] + data["res"][i]["number"] + "&#151" + data["res"][i]["teacher"] + " " + data["res"][i]["school"] + "</h3><p id='description'>" + data["res"][i]["description"] + "</p></div>");
-                      }
-                      $(isotope());
-                      // $(isotopeUpdate());
-                      
-                    });
-                    return false;
-
-                  }
-              });
+                    createCards();
+              }
 
           $("#background").click(function(){
               $("#background").fadeOut("slow");
@@ -368,9 +208,7 @@
           });
 
     });
-  
-
-    
+    }); 
     </script>
    
 

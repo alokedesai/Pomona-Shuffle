@@ -122,7 +122,7 @@ ul, ol {
   margin-left: 1.5em;
 }
 
-a,
+/*a,
 a code {
   color: #FB4;
   text-decoration: none;
@@ -138,8 +138,8 @@ a:active code {
   color: #1FB;
   background: black;
 }
+*/
 
-a img { border: none; }
 
 em { font-style: italic; }
 strong { font-weight: bold; }
@@ -162,8 +162,10 @@ body {
 #container {
   padding: 5px;
   margin-bottom: 20px;
-  width:1000px;
-  height:700px;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 600px;
+ 
 }
 
 .element {
@@ -440,8 +442,7 @@ body {
     overflow-x:hidden;
 
 }
-
-a, h1, h2 {
+h1, h2 {
     color: #FFFFFF;
 }
 
@@ -677,7 +678,7 @@ p {
   font-weight: 400;
 }
 
-a, h1, h2 {
+h1, h2 {
     color: #FFFFFF;
 }
 
@@ -862,7 +863,7 @@ overflow-y: auto;
   border-radius: 8px;
 }
 
-button {
+/*button {
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -878,9 +879,9 @@ button {
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
-.button:hover {
+/*.button:hover {
   text-decoration: none;
-}
+}*/
 .button:active {
   position: relative;
   top: 1px;
@@ -1004,12 +1005,7 @@ text-align:center;
 }
 
 
-a:hover{
-    -webkit-box-shadow: 0 0 8px #FFD700;
-    -moz-box-shadow: 0 0 8px #FFD700;
-    box-shadow: 0 0 8px #FFD700;
-    cursor:pointer;
-}
+
 
 .border2{
   position: absolute;
@@ -1050,12 +1046,9 @@ html, body {
     display: table-cell;
     vertical-align: middle;
 }
-#welcome{
-  width: 800px;
-  height: 164px;
-  text-align: center;
-}
-#logo{font-weight: normal;text-transform:uppercase;font-family:'FranchiseRegular','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;}
+/*component.css*/
+
+#logo{font-weight: 900;text-transform:uppercase;font-family:'museo-sans-condensed','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;}
 #logo span{display:inline-block;position:relative;letter-spacing:-1px;-webkit-transition:all 0.2s ease-out;}
 #logo span:hover{top:3px}
 #logo .char2, #logo .char11{color:#e36b23;text-shadow:#9b4d1f -4px 4px 0}
@@ -1075,7 +1068,7 @@ html, body {
 #logo .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
 #logo .char12{left:-24px}
 
-#logo2 {font-weight: normal;text-transform:uppercase;font-family:'FranchiseRegular','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;margin-top:30px;}
+#logo2 {font-weight: 900;text-transform:uppercase;font-family:"museo-sans-condensed",'HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:75px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;margin-top:30px;}
 #logo2 span{display:inline-block;position:relative;letter-spacing:-1px;-webkit-transition:all 0.2s ease-out;}
 #logo2 span:hover{top:3px}
 #logo2 .char2, #logo .char11{color:#e36b23;text-shadow:#9b4d1f -4px 4px 0}
@@ -1094,3 +1087,12 @@ html, body {
 #logo2 .char10:hover{-webkit-transition-duration:0.4s;}
 #logo2 .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
 #logo .char12{left:-24px}
+
+
+#main-logo{font-weight: 900;text-transform:uppercase;font-family:'museo-sans-condensed','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;}
+#main-logo span{display:inline-block;position:relative;letter-spacing:-1px;-webkit-transition:all 0.2s ease-out;}
+#main-logo span:hover{top:3px}
+#main-logo .char2, #logo .char11{color:#5da028;text-shadow:#427021 -4px 4px 0}
+#main-logo .char3, #logo .char10{z-index:10;color:#e6c92e;text-shadow:#9c8b26 -4px 4px 0}
+
+#main-logo .char1{-webkit-transform:rotate(-3deg)}
