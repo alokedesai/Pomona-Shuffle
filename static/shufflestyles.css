@@ -79,8 +79,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/*  font: inherit;
+*/  vertical-align: baseline;
 }
 
 article, aside, details, figcaption, figure,
@@ -90,7 +90,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   padding: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;*/
   font-size: 13px;
   line-height: 1.7em;
   background: #1F1E1D;
@@ -103,7 +103,7 @@ h1, h2, h3, p, ul, ol, pre, dl {
 
 h1, h2, #super-list, .element, .tagline, #index-list, 
 .super-list .link {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  /*font-family: 'Helvetica Neue', Arial, sans-serif;*/
 }
 
 h1, h2, h3 { font-weight: bold; }
@@ -255,6 +255,7 @@ body {
 .card:hover  {
   opacity: .5;
   
+
 }
 
 .clickable .card:hover h2 {
@@ -434,7 +435,7 @@ h3#options {
 .clearfix { zoom: 1; }
 
 body {
-    font-family: 'Garamond','HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue';
+    /*font-family: 'Garamond','HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue';*/
     background-image: url('linen.jpg');
     overflow-x:hidden;
 
@@ -447,7 +448,7 @@ a, h1, h2 {
 
 
 h2 {
-    font-family: 'Helvetica';
+    /*font-family: 'Helvetica';*/
     font-size: 1.5em;
 }
 
@@ -666,13 +667,13 @@ ul#saveList, li{
 }
 
 body {
-    font-family: 'Garamond','HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue';
+    /*font-family: 'Garamond','HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue';*/
     background-color: #000;
-    font-family: "Helvetica", "Helvetica", "Arial", sans-serif;
+    /*font-family: "Helvetica", "Helvetica", "Arial", sans-serif;*/
     font-weight: 100;
 }
 p {
-  font-family: "Helvetica", "Arial";
+  /*font-family: "Helvetica", "Arial";*/
   font-weight: 400;
 }
 
@@ -1049,3 +1050,47 @@ html, body {
     display: table-cell;
     vertical-align: middle;
 }
+#welcome{
+  width: 800px;
+  height: 164px;
+  text-align: center;
+}
+#logo{font-weight: normal;text-transform:uppercase;font-family:'FranchiseRegular','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;}
+#logo span{display:inline-block;position:relative;letter-spacing:-1px;-webkit-transition:all 0.2s ease-out;}
+#logo span:hover{top:3px}
+#logo .char2, #logo .char11{color:#e36b23;text-shadow:#9b4d1f -4px 4px 0}
+#logo .char3, #logo .char10{z-index:10;color:#e6c92e;text-shadow:#9c8b26 -4px 4px 0}
+#logo .char4, #logo .char9{color:#5da028;text-shadow:#427021 -4px 4px 0}
+#logo .char5, #logo .char8{color:#4584be;text-shadow:#2f597f -4px 4px 0}
+#logo .char6, #logo .char7{color:#7073cf;text-shadow:#4a4d88 -4px 4px 0}
+#logo .char1{-webkit-transform:rotate(-3deg)}
+#logo .char3{top:-1px;-webkit-transform:rotate(2deg)}
+#logo .char4{top:-7px}
+#logo .char6{top:-7px;-webkit-transform:rotate(2deg)}
+#logo .char7{}
+#logo .char8{top:1px;-webkit-transform:rotate(-2deg)}
+#logo .char9{-webkit-transform:rotate(2deg)}
+#logo .char10{top:-65px;width:36px;}
+#logo .char10:hover{-webkit-transition-duration:0.4s;}
+#logo .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
+#logo .char12{left:-24px}
+
+#logo2 {font-weight: normal;text-transform:uppercase;font-family:'FranchiseRegular','HelveticaNeue-Bold','League Gothic','Impact',sans-serif;font-size:100px;margin-bottom:-32px;margin-left:10px;color:#c44032;text-shadow:#863027 -4px 4px 0;margin-top:30px;}
+#logo2 span{display:inline-block;position:relative;letter-spacing:-1px;-webkit-transition:all 0.2s ease-out;}
+#logo2 span:hover{top:3px}
+#logo2 .char2, #logo .char11{color:#e36b23;text-shadow:#9b4d1f -4px 4px 0}
+#logo2 .char3, #logo .char10{z-index:10;color:#e6c92e;text-shadow:#9c8b26 -4px 4px 0}
+#logo2 .char4, #logo .char9{color:#5da028;text-shadow:#427021 -4px 4px 0}
+#logo2 .char5, #logo .char8{color:#4584be;text-shadow:#2f597f -4px 4px 0}
+#logo2 .char6, #logo .char7{color:#7073cf;text-shadow:#4a4d88 -4px 4px 0}
+#logo2 .char1{-webkit-transform:rotate(-3deg)}
+#logo2 .char3{top:-1px;-webkit-transform:rotate(2deg)}
+#logo2 .char4{top:-7px}
+#logo2 .char6{top:-7px;-webkit-transform:rotate(2deg)}
+#logo2 .char7{}
+#logo2 .char8{top:1px;-webkit-transform:rotate(-2deg)}
+#logo2 .char9{-webkit-transform:rotate(2deg)}
+#logo2 .char10{top:-65px;width:36px;}
+#logo2 .char10:hover{-webkit-transition-duration:0.4s;}
+#logo2 .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
+#logo .char12{left:-24px}
