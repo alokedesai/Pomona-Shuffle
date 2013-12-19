@@ -170,5 +170,6 @@ function update() {
         $container.isotope('reLayout');
       }
       });
+    keyNavigationDisabled = false;
           
   }

@@ -438,7 +438,6 @@ h3#options {
 
 body {
     /*font-family: 'Garamond','HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue';*/
-    background-image: url('linen.jpg');
     overflow-x:hidden;
 
 }
@@ -637,14 +636,28 @@ ul#saveList, li{
 .cardNumber{
   display:none;
   }
-.header-info {
+.card .header-info {
   width: 100%; 
-  background-color: #015C65; 
+  background-color: rgb(46,86,117); 
   border-top-right-radius: 15px;
 -moz-border-radius-topright: 15px;
+padding-right: 5px;
+padding-left: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+height: 45px;
+overflow: hidden;
+}
+.large .header-info{
+  height: auto;
+  max-height: 75px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  overflow: hidden;
 }
 #info {
-  position: relative; text-align:center;
+  text-align:center;
+  padding-top: 5px;
 }
 #description {
   position: absolute; 
@@ -724,33 +737,33 @@ p {
 
 div#box4
 {
-background-color: #A60000;/*orange*/
+background-color: rgb(136,54,54);;/*orange*/
 color: #FFFFFF;
 }
 div#box0
 {
-background-color: #bf6a30;/*orange*/
+background-color: rgb(187,122,30);/*orange*/
 color: #FFFFFF;
 }
 div#box1
 {
-background-color: #1e796a;/*green*/
+background-color: rgb(54,136,54);/*green*/
 color: #FFFFFF;
 }
 div#box2
 {
-background-color: #bf3030;/*blue*/
+background-color: rgb(54,100,136);/*blue*/
 color: #FFFFFF;
 }
 div#box3
 {
-background-color: #c7007d;/*green*/
+background-color: rgb(54, 136, 54);/*green*/
 color: #FFFFFF;
 }
 
 div#box5
 {
-background-color: rgb(41,124,41) ;/*green*/
+background-color: rgb(45, 156, 144);/*green*/
 color: #FFFFFF;
 }
 div#box6
@@ -1096,3 +1109,12 @@ html, body {
 #main-logo .char3, #logo .char10{z-index:10;color:#e6c92e;text-shadow:#9c8b26 -4px 4px 0}
 
 #main-logo .char1{-webkit-transform:rotate(-3deg)}
+
+.spacebar{
+  border: 2px solid white;
+  height: 35px;
+  padding: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 12px;
+}

@@ -60,8 +60,14 @@
               <h1 id="logo2"> Shuffle</h1>
             </div>
             <div id="moreInfo" style="margin-top: 20%;" >
-              <a  onclick="createCards()" class="btn btn-2 btn-2a">Get Started</a> 
-            <h2 style="text-align: center;">Pomona Shuffle helps you explore the course catalog. </br> To get started, press the spacebar.</h2>
+              <a  onclick="createCards()" class="btn btn-2 btn-2a scroll">Get Started</a> 
+            <div>
+              <div><h2 style="text-align: center;">Pomona Shuffle helps you explore the course catalog.  To get started, press the <span class="spacebar"> spacebar</span>
+                </h2>
+
+              </div>
+
+            </div>
              
             </div>
             
@@ -114,6 +120,7 @@
   <div id="background"></div>
   
     <script>  
+    var keyNavigationDisabled = false;
     var opts = {
       lines: 13, // The number of lines to draw
       length: 15, // The length of each line
@@ -135,6 +142,7 @@
     var spinner = new Spinner(opts);
 
     function createCards() {
+      keyNavigationDisabled = true;
        if($('#welcome').is(':visible')){
                       $('#welcome').hide();
                       $("#main-logo").fadeIn(1300);
@@ -156,7 +164,7 @@
                       for (i=0; i < data["res"].length; i++) {
                        
                       
-                       $(".deck").append("<div class='card' id='box" + i%3 + "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["name"] +"</h1></div><h3 id='info'>" + data["res"][i]["major"] + data["res"][i]["number"] + "&#151" + data["res"][i]["teacher"] + " " + data["res"][i]["school"] + "</h3><p id='description'>" + data["res"][i]["description"] + "</p></div>");
+                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*6))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["name"] +"</h1></div><h3 id='info'>" + data["res"][i]["major"] + data["res"][i]["number"] + "&#151" + data["res"][i]["teacher"] + " " + data["res"][i]["school"] + "</h3><p id='description'>" + data["res"][i]["description"] + "</p></div>");
                       }
                       update();
                       
@@ -194,6 +202,7 @@
                       $("#large").fadeOut("slow");
                   }
                   if(e.which==32){
+                    if (keyNavigationDisabled) return;
                     createCards();
               }
 
