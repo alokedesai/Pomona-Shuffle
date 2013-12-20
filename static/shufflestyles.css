@@ -234,11 +234,11 @@ body {
   top: 0.5em;
 }
 
-.variable-sizes .element.width2 { width: 230px; }
+.variable-sizes .card.width2 { width: 230px; }
 
-.variable-sizes .element.height2 { height: 230px; }
+.variable-sizes .card.height2 { height: 230px; }
 
-.variable-sizes .element.width2.height2 {
+.variable-sizes .card.width2.height2 {
   font-size: 2.0em;
 }
 
@@ -470,11 +470,11 @@ div.card
 {
 /*width: 25em;   width of each container
 height: 32em;*/ /* height of each container*/
+margin-top: 3px;
+margin-bottom: 3px;
+width: 178px;
+height: 178px;
 
-width: 200px;
-height: 110px;
-margin: 5px;
-position: relative;
 overflow: hidden; /* instructure each container to obey the position absolutely*/
 float: left; /* float all the container so that they overlapped each other*/
 
@@ -630,9 +630,9 @@ ul#saveList, li{
 }
 
 
-.variable-sizes .element.width2 { width: 230px; }
+.variable-sizes .card.width2 { width: 230px; }
 
-.variable-sizes .element.height2 { height: 230px; }
+.variable-sizes .card.height2 { height: 230px; }
 .cardNumber{
   display:none;
   }
@@ -1118,3 +1118,21 @@ html, body {
   padding-left: 8px;
   border-radius: 12px;
 }
+/*New code*/
+.variable-sizes .card.width2 { width: 230px; }
+
+.variable-sizes .card.height2 { height: 230px; }
+
+.variable-sizes .card.width2.height2 {
+  font-size: 2.0em;
+}
+
+.card.large,
+.variable-sizes .card.large,
+.variable-sizes .card.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 360px;
+  z-index: 100;
+}
+
