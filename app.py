@@ -129,11 +129,15 @@ def hong():
 	random.shuffle(course_list)
 	return render_template('index.html', course_list=course_list)
 
-@app.route('/')
+# @app.route('/')
+# def index():
+# 	course_list = list(db.cols.find())
+# 	random.shuffle(course_list)
+# 	return render_template('index.html', course_list=course_list)
+
+@app.route("/")
 def index():
-	course_list = list(db.cols.find())
-	random.shuffle(course_list)
-	return render_template('index.html', course_list=course_list)
+	return render_template("shuffle.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
