@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>5c shuffle</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='shufflestyles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='component.css') }}">
@@ -39,7 +40,7 @@
         
       </span>
       <span class="col-md-8">
-        <h1 style="text-align: center; display: none;" onclick="createCards()"id="main-logo">PS</h1>
+        <h1 style="text-align: center; display: none;" onclick="logoCall()" id="main-logo">PS</h1>
       </span>
       <span class="col-md-2 pull-right">
         <!-- <div class="whatisthis"><a class="fancybox" style="font-family:Helvetica, Arial; color:#fff;" href='#inline1' title="Hit 'esc' or click close to get started!">WHAT IS THIS?</a></div> -->
@@ -60,7 +61,11 @@
               <h1 id="logo2"> Shuffle</h1>
             </div>
             <div id="moreInfo" style="margin-top: 20%;" >
-              <a  onclick="createCards()" class="btn btn-2 btn-2a scroll">Get Started</a> 
+              <script type="text/javascript">
+               
+
+              </script>
+              <a  onclick="logoCall" class="btn btn-2 btn-2a scroll">Get Started</a> 
             <div>
               <div><h2 style="text-align: center;">Pomona Shuffle helps you explore the course catalog.  To get started, press the <span class="spacebar"> spacebar</span>
                 </h2>
@@ -123,6 +128,10 @@
     <script>
      
     var keyNavigationDisabled = false;
+     function logoCall() {
+                  if (keyNavigationDisabled) return;
+                  createCards();
+                }
     var opts = {
       lines: 13, // The number of lines to draw
       length: 15, // The length of each line
@@ -166,7 +175,7 @@
                       for (i=0; i < data["res"].length; i++) {
                        
                       
-                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*6))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] + ", " + data["res"][i]["school"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div>");
+                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*5))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] + ", " + data["res"][i]["school"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div>");
                       }
                       update();
                       

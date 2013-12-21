@@ -247,11 +247,7 @@ body {
 .clickable .card:hover {
   cursor: pointer;
 }
-.card:hover  {
-  opacity: .7;
-  
 
-}
 
 .clickable .card:hover h2 {
   color: white;
@@ -708,48 +704,46 @@ p {
 
 div#box4
 {
-background-color: rgb(136,54,54);;/*orange*/
+background-color: rgb(136,54,54);;/*red*/
 color: #FFFFFF;
 }
+#box4:hover, div.card.large#box4{
+  background-color: #772B2B;
+}
+
 div#box0
 {
 background-color: rgb(187,122,30);/*orange*/
 color: #FFFFFF;
 }
-div#box1
-{
-background-color: rgb(54,136,54);/*green*/
-color: #FFFFFF;
+#box0:hover, div.card.large#box0{
+  background-color: #AD6700;
 }
+
 div#box2
 {
 background-color: rgb(54,100,136);/*blue*/
 color: #FFFFFF;
+}
+#box2:hover, div.card.large#box2 {
+  background-color: #294F6D; 
 }
 div#box3
 {
 background-color: rgb(54, 136, 54);/*green*/
 color: #FFFFFF;
 }
+#box3:hover, div.card.large#box3{
+  background-color: #297C29;
+}
 
-div#box5
+div#box1
 {
-background-color: rgb(45, 156, 144);/*green*/
+background-color: rgb(45, 156, 144);/*turquoise*/
 color: #FFFFFF;
 }
-div#box6
-{
-background-color: #E37373;/*pink*/
-color: #FFFFFF;
-}
-div#box7
-{
-background-color: #B2B2B2;/*grey*/
-color: #FFFFFF;
-}
-div#box8
-{
-background-color: #A51515;/*red*/
+#box1:hover, div.card.large#box1{
+  background-color: #238A7F;
 }
 
 
@@ -1085,9 +1079,9 @@ html, body {
   border: 2px solid white;
   height: 35px;
   padding: 6px;
-  padding-right: 8px;
-  padding-left: 8px;
-  border-radius: 12px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 8px;
 }
 /*New code*/
 div.card.large{
@@ -1121,17 +1115,20 @@ div.card #description{
   display: none;
   font-size: 14px;
   padding: 4px;
-  line-height: 16px;
+  line-height: 1.3em;
+  font-family: "PT Sans", "sans-serif";
   font-weight: 400px;
 }
 div.card .school{
   display: none;
+  font-family: "PT Sans", "sans-serif";
 }
 div.card.large p#description{
   display: inline;
 }
 div.card.large .school{
   display: block;
+
 }
 .variable-sizes .card.width2 { width: 230px; }
 
@@ -1143,12 +1140,14 @@ div.card.large .school{
 div.card #info{
   padding: 3px;
   word-wrap: break-word;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1em;
+  font-family: "PT Sans", "sans-serif";
 }
 div.card.large #info{
   font-size: 25px;
+  line-height: 20px;
 }
 
 .school{
