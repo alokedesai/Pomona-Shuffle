@@ -85,7 +85,7 @@ def test():
 @app.route('/_add_numbers')
 def add_numbers():
 
-    course_list = list(db.cols.find())
+    course_list = list(db.test.find())
     
     random.shuffle(course_list)
     course_list = course_list[:12]

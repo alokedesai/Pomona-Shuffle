@@ -92,7 +92,7 @@ body {
   padding: 20px;
   /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;*/
   font-size: 13px;
-  line-height: 1.7em;
+  
   background: #1F1E1D;
   color: #FFF;
 }
@@ -1122,6 +1122,8 @@ div.card #description{
 div.card .school{
   display: none;
   font-family: "PT Sans", "sans-serif";
+  font-size: 11px;
+  padding: 3px;
 }
 div.card.large p#description{
   display: inline;

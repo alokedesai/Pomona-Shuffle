@@ -175,7 +175,7 @@
                       for (i=0; i < data["res"].length; i++) {
                        
                       
-                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*5))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] + ", " + data["res"][i]["school"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div>");
+                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*5))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] +  "<br>" + data["res"][i]["time"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div>");
                       }
                       update();
                       
