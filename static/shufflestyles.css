@@ -168,7 +168,7 @@ body {
  
 }
 
-.element {
+/*.element {
   width: 110px;
   height: 110px;
   margin: 5px;
@@ -180,7 +180,7 @@ body {
   -webkit-border-top-right-radius: 1.2em;
       -moz-border-radius-topright: 1.2em;
           border-top-right-radius: 1.2em;
-}
+}*/
 
 .element.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
 .element.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
@@ -242,20 +242,13 @@ body {
   font-size: 2.0em;
 }
 
-.card.large,
-.variable-sizes .card.large,
-.variable-sizes .card.large.width2.height2 {
-  font-size: 1em;
-  width: 440px;
-  height: 232px;
-  z-index: 100;
-}
+
 
 .clickable .card:hover {
   cursor: pointer;
 }
 .card:hover  {
-  opacity: .5;
+  opacity: .7;
   
 
 }
@@ -466,33 +459,7 @@ p {
 }
 
 
-div.card
-{
-/*width: 25em;   width of each container
-height: 32em;*/ /* height of each container*/
-margin-top: 3px;
-margin-bottom: 3px;
-width: 178px;
-height: 178px;
 
-overflow: hidden; /* instructure each container to obey the position absolutely*/
-float: left; /* float all the container so that they overlapped each other*/
-
-overflow-y: auto;
-/*border: #fff solid 1px; *//* give it a border to make it look nice*/
-border-top-right-radius: 15px;
--moz-border-radius-topright: 15px;
-
-border-bottom-right-radius: 15px;
--moz-border-radius-bottomright: 15px;
-
-border-bottom-left-radius: 15px;
--moz-border-radius-bottomleft: 15px;
-
-
-
-word-wrap: break-word;
-}
 div.card2
 {
 width: 245px;
@@ -645,7 +612,8 @@ padding-right: 5px;
 padding-left: 5px;
 padding-top: 2px;
 padding-bottom: 2px;
-height: 45px;
+font-size: 10px;
+height: 30px;
 overflow: hidden;
 }
 .large .header-info{
@@ -732,6 +700,9 @@ p {
 
 .entry-info {
     margin-top: 0; 
+}
+.school{
+  font-size: 12px;
 }
 
 
@@ -1119,6 +1090,49 @@ html, body {
   border-radius: 12px;
 }
 /*New code*/
+div.card.large{
+  font-size: 2.5em;
+  width: 366px;
+  height: 366px;
+  z-index: 100;
+  margin-right: 0px;
+  overflow-y: scroll;
+}
+
+
+
+div.card{
+  width: 178px;
+  height: 178px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  margin: 5px;
+  color: #222;
+  -webkit-border-radius: 0px 1.2em  1.2em 1.2em;
+      -moz-border-radius: 0px 1.2em  1.2em 1.2em;
+          border-radius:  0px 1.2em  1.2em 1.2em;
+/*  -webkit-border-top-right-radius: 0px;
+      -moz-border-radius-topright: 0px;
+          border-top-right-radius: 0px;*/
+}
+div.card #description{
+  display: none;
+  font-size: 14px;
+  padding: 4px;
+  line-height: 16px;
+  font-weight: 400px;
+}
+div.card .school{
+  display: none;
+}
+div.card.large p#description{
+  display: inline;
+}
+div.card.large .school{
+  display: block;
+}
 .variable-sizes .card.width2 { width: 230px; }
 
 .variable-sizes .card.height2 { height: 230px; }
@@ -1126,13 +1140,20 @@ html, body {
 .variable-sizes .card.width2.height2 {
   font-size: 2.0em;
 }
+div.card #info{
+  padding: 3px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+div.card.large #info{
+  font-size: 25px;
+}
 
-.card.large,
-.variable-sizes .card.large,
-.variable-sizes .card.large.width2.height2 {
-  font-size: 3.0em;
-  width: 350px;
-  height: 360px;
-  z-index: 100;
+.school{
+  font-size: 13px;
+  text-align: center;
+  font-weight: 400;
 }
 

@@ -88,7 +88,7 @@ def add_numbers():
     course_list = list(db.cols.find())
     
     random.shuffle(course_list)
-    course_list = course_list[:13]
+    course_list = course_list[:12]
 
     resp = Response(json.dumps({'res': course_list}, default=json_util.default),
                 mimetype='application/json')
