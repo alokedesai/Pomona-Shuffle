@@ -32,6 +32,7 @@ courses = []
 description = []
 profs = []
 time = []
+link = []
 for classes in soup2:
         ol = classes.find("ol",  {"class" : "course_list content"})
         li1 = ol.findAll("li", {"class" : re.compile(r"^(odd|even)$")})
@@ -39,6 +40,7 @@ for classes in soup2:
           
 
           courselist = li.find("h3")
+          link.append(courselist.find("a")["href"])
           professor = li.find("h4")
           desc = li.find("p")
           date = li.find("li", {"class" : "meeting"})
@@ -118,8 +120,7 @@ for i in range(0, len(courses)):
   name = ""
   if names[i]:
     name = names[i]
-  else:
-    name = ""
+
   course = {'coursename': courses[i],
             "name" : name,
             'major': majors[i].strip(),
@@ -128,5 +129,6 @@ for i in range(0, len(courses)):
           "teacher" : profs[i][0:(profs[i].find("credit")-3)],
           "school" : schools[i],
           'description': description[i],
-          'time': time[i]}
-  db.test.insert(course)
+          'time': time[i],
+          "link" : "aspc.pomona.edu" + link[i]}
+  db.cols.insert(course)
