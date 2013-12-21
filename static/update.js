@@ -15,11 +15,12 @@ function update() {
       
      
       
-      // change size of clicked element
+      //change size of clicked element
       $container.delegate( '.card', 'click', function(){
-        $(this).toggleClass('large');
+        $(this).closest(".card").toggleClass('large');
         $container.isotope('reLayout');
       });
+
       $("div.card:first").delay(8000).trigger("click")
       
       });

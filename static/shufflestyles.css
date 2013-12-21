@@ -1125,8 +1125,22 @@ div.card .school{
   font-size: 11px;
   padding: 3px;
 }
+div.card #link{
+  display: none;
+  font-family: "PT Sans", "sans-serif";
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(97,133,163);
+  height: 40px;
+  position: absolute;
+  font-size: 15px;
+  text-align: center;
+}
+div.card.large #link{
+  display: block;
+}
 div.card.large p#description{
-  display: inline;
+  display: block;
 }
 div.card.large .school{
   display: block;

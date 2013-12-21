@@ -96,18 +96,7 @@
 
 
     <div id="container" style="margin-top: 15px" class="clickable clearfix container">            
-<!--   <div class='deck'>
-    {% for i in range(0,length) %}
-      <div class='card ' id='box{{ i % 3 }}'>
-        <div class='subcard {{course_list[i]['favorite']}}'>
-        <div class="cardNumber">{{i+1}}</div>
-        <div class="header-info"> <h1 class="classTitle">{{course_list[i]['name']}}</h1> </div>
-        <h3 id="info">{{course_list[i]["major"]}}{{course_list[i]['number']}} &#151 {{course_list[i]['teacher']}} ({{course_list[i]["school"]}})</h3>
-        <p id="description">{{course_list[i]['description']}}</p>
-      </div>
-      </div>
-    {% endfor %}
-  </div> -->
+
   </div>
   
   <div id="inline1" style="width:400px;display:none;">
@@ -175,7 +164,7 @@
                       for (i=0; i < data["res"].length; i++) {
                        
                       
-                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*5))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] +  "<br>" + data["res"][i]["time"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div>");
+                       $(".deck").append("<div class='card' id='box" + Math.floor((Math.random()*5))+ "'><div class='cardNumber'>" + (i+1) + "</div><div class='header-info'><h1 class='classTitle'>" + data["res"][i]["major"] + data["res"][i]["number"] +"</h1></div><div class='box_content'><div id='info'>" + data["res"][i]["name"] +"</div>" + "<div class='school'>" + data["res"][i]["teacher"] +  "<br>" + data["res"][i]["time"] + "</div>" + "<p id='description'>" + data["res"][i]["description"] + "</p></div></div>");
                       }
                       update();
                       
