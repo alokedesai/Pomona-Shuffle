@@ -18,7 +18,6 @@ connection = MongoClient("ds029638.mongolab.com", 29638)
 db = connection["api"]
 db.authenticate("alokedesai","domino")
 
-
 string = []
 major = []
 soup2 = []
@@ -55,8 +54,10 @@ for classes in soup2:
           if courselist == None:
             courses.append("")
           else:
-
-         		courses.append(courselist.getText())
+            if courselist.getText() == "null" or courselist.getText() == "None":
+              coures.append("course not found")
+            else:
+             courses.append(courselist.getText())
 
          
           if professor == None:
@@ -64,13 +65,13 @@ for classes in soup2:
           else:
           
             profs.append(professor.getText())
-          	
+            
           
           if desc == None:
             description.append("")
           else:
             
-          	description.append(desc.getText().replace("\n"," ").replace("\r"," ").replace("'"," "))
+            description.append(desc.getText().replace("\n"," ").replace("\r"," ").replace("'"," "))
 
 dept = []
 #This is the unicode shit that i was stuck on
@@ -114,8 +115,13 @@ for i in range(len (courses)):
           # "teacher" : profs[i][0:(profs[i].find("credit")-3)],
 
 for i in range(0, len(courses)):
+  name = ""
+  if names[i]:
+    name = names[i]
+  else:
+    name = ""
   course = {'coursename': courses[i],
-            "name" : names[i],
+            "name" : name,
             'major': majors[i].strip(),
           'number' : int(number[i]),            
           'profs': profs[i],
@@ -123,5 +129,4 @@ for i in range(0, len(courses)):
           "school" : schools[i],
           'description': description[i],
           'time': time[i]}
-  db.cols.insert(course)
-			          
+  db.test.insert(course)
