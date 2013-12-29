@@ -11,7 +11,7 @@
 
   <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="../../../../static/isotope2.js"></script>
-  <script src="http://fgnass.github.io/spin.js/dist/spin.js"></script>
+  <script src=" {{ url_for('static', filename='spinner.js') }}"></script>
   <script src=" {{ url_for('static', filename='jquery.lettering-0.6.1.min.js') }}"></script>
     <script src=" {{ url_for('static', filename='update.js') }}"></script>
 
@@ -180,21 +180,7 @@
 
     $(function(){
         var execute = true
-        $('.fancybox').mouseenter(function(){
-        $('div a.fancybox').css('color','#CCC');
-      });
-      $('.fancybox').mouseleave(function(){
-        $('div a.fancybox').css('color','#fff');
-      });
-      $(".fancybox").click(function(){
 
-              $("#background").css({"opacity" : "0.6",'position' : 'absolute','z-index' : '9998'})
-                            .fadeIn("slow");
-
-              $("#inline1").css({'opacity' : '1','z-index' : '9999'}).center().fadeIn('slow');
-
-              return false;
-          });
 
       $(document).keypress(function(e){
                   if(e.keyCode==27){
